@@ -1,3 +1,5 @@
+# this just requires minitest and tells minitest to automatically take any class
+# that inherits from Minitest::Test and run all of the tests defined within
 require "minitest/autorun"
 
 def convert(temp, unit_a, unit_b)
