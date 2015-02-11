@@ -10,8 +10,11 @@ def convert(temp, unit_a, unit_b)
   end
 end
 
+# The class name can be anything we want, we just have to inherit from Minitest::Test
 class TestCalculator < Minitest::Test
+  # any method that starts with "test" will be ran as a test.
   def test_converts_0C_to_32F
+    # expected values on the left, actual values on the right.
     assert_equal 32, convert(0,"C","F")
   end
 
@@ -33,5 +36,10 @@ class TestCalculator < Minitest::Test
 
   def test_100C_to_100C
     assert_equal 100, convert(100,"C","C")
+  end
+
+  def not_a_test
+    # notice that this test doesn't run
+    assert false
   end
 end
